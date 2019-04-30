@@ -1,0 +1,13 @@
+version: '2.3'
+
+services:
+  mysql_local:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: myservice
+      MYSQL_USER: app
+      MYSQL_PASSWORD: mysecretpassword
+    ports:
+      - "3306:3306"
+    container_name: test_mysql
